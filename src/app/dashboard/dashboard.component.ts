@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from '../services/movie.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private movieService: MovieService
+  ) { }
 
   ngOnInit(): void {
+    this.movieService.getYearsWithMultipleWinners().subscribe({
+      next: (data) => { console.log(data) },
+      error: (e) => { }
+    })
   }
+
 
 }
