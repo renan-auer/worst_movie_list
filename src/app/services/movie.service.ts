@@ -6,6 +6,7 @@ import { YearWinnerResponse } from '../models/year-winner-count.model';
 import { Movie } from '../models/movie.model';
 import { MoviesPaginated } from '../models/movies-paginated';
 import { StudioWinnerResponse } from '../models/studios-winner';
+import { ProducerWinIntervalResponse } from '../models/producer-win-interval';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,10 @@ export class MovieService {
 
   getStudiosWinners() {
     return this.http.get<StudioWinnerResponse>(`${environment.apiUrl}?projection=studios-with-win-count`);
+  }
+
+  getProducersIntervalWin() {
+    return this.http.get<ProducerWinIntervalResponse>(`${environment.apiUrl}?projection=max-min-win-interval-for-producers`);
   }
 
   getMovies(page: number, size: number, winner?: boolean | null, year?: number | null) {

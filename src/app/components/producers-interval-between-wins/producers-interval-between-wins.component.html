@@ -1,1 +1,42 @@
-<p>producers-interval-between-wins works!</p>
+<h4>Producers with longest and shortest interval between wins</h4>
+
+<h3>Maximum</h3>
+<table class="mb-1">
+    <thead>
+        <tr>
+            <th>Producer</th>
+            <th>Interval</th>
+            <th>Previous Year</th>
+            <th>Following Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producer of maxProducerIntervalWin">
+            <td>{{producer.producer}}</td>
+            <td>{{producer.interval}}</td>
+            <td>{{producer.previousWin}}</td>
+            <td>{{producer.followingWin}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h3>Minimum</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Producer</th>
+            <th>Interval</th>
+            <th>Previous Year</th>
+            <th>Following Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producer of minProducerIntervalWin">
+            <td>{{producer.producer}}</td>
+            <td>{{producer.interval}}</td>
+            <td>{{producer.previousWin}}</td>
+            <td>{{producer.followingWin}}</td>
+        </tr>
+    </tbody>
+</table>
