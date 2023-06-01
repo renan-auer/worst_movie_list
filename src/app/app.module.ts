@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { MoviesWinnersByYearComponent } from './components/movies-winners-by-year/movies-winners-by-year.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { YearsWithMultipleWinnersComponent } from './components/years-with-multiple-winners/years-with-multiple-winners.component';
+import { StudiosWinnersComponent } from './components/studios-winners/studios-winners.component';
+import { ProducersIntervalBetweenWinsComponent } from './components/producers-interval-between-wins/producers-interval-between-wins.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { YearsWithMultipleWinnersComponent } from './components/years-with-multi
     MovieListComponent,
     MoviesWinnersByYearComponent,
     PaginatorComponent,
-    YearsWithMultipleWinnersComponent
+    YearsWithMultipleWinnersComponent,
+    StudiosWinnersComponent,
+    ProducersIntervalBetweenWinsComponent
   ],
   imports: [
     BrowserModule,

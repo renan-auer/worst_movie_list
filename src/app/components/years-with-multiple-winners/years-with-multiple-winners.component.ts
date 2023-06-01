@@ -19,8 +19,7 @@ export class YearsWithMultipleWinnersComponent implements OnInit {
     this.getYears()
   }
 
-  
-  getYears() {
+  private getYears() {
     this.movieService.getYearsWithMultipleWinners().subscribe({
       next: (data) => { this.yearList = data?.years },
       error: (e) => { alert("Erro ao obter dados. Tente novamente mais tarde.") }
