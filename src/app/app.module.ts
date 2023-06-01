@@ -8,13 +8,15 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MoviesWinnersByYearComponent } from './components/movies-winners-by-year/movies-winners-by-year.component';
+import { PaginatorComponent } from './components/paginator/paginator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     MovieListComponent,
-    MoviesWinnersByYearComponent
+    MoviesWinnersByYearComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,

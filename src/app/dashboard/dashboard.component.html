@@ -9,15 +9,6 @@
         <h4>Producers with longest and shortest interval between wins</h4>
     </div>
     <div class="card col-6 mb-1">
-        <div class="row">
-            <div class="col-9">
-                <input type="number" [(ngModel)]="yearFilter" required value="2023">
-            </div>
-            <div class="col-2">
-                <button class="btn" (click)="getMoviesByYear()">Pesquisar</button>
-            </div>
-        </div>
-        <h4>List movie winners by years</h4>
-        <movies-winners-by-year [movies]="moviesByYear"></movies-winners-by-year>
+        <movies-winners-by-year></movies-winners-by-year>
     </div>
 </div>

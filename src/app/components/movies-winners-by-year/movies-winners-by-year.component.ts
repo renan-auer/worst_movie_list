@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie.model';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'movies-winners-by-year',
@@ -8,11 +9,19 @@ import { Movie } from 'src/app/models/movie.model';
 })
 export class MoviesWinnersByYearComponent implements OnInit {
 
-  constructor() { }
+  constructor( private movieService: MovieService ) { }
 
-  @Input() movies: Movie[] = []
+  yearFilter: number = 2019
+  movies: Movie[] = []
 
   ngOnInit(): void {
+    this.getMoviesByYear()
   }
 
+  getMoviesByYear() {
+    this.movieService.getMoviesByYear(this.yearFilter).subscribe({
+      next: (data) => { this.movies = data },
+      error: (e) => { }
+    })
+  }
 }

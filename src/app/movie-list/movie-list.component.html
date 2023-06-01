@@ -1,1 +1,31 @@
-<p>movie-list works!</p>
+<h4>List movie winners by years</h4>
+
+<table class="mb-1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th class="center">
+                Year
+                <input type="number" [(ngModel)]="yearFilter" (ngModelChange)="yearChanged()">
+            </th>
+            <th>Title</th>
+            <th class="center">Winner
+                <select [(ngModel)]="winnerFilter" (ngModelChange)="winnerChanged()">
+                    <option></option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of movies">
+            <td>{{movie.id}}</td>
+            <td>{{movie.year}}</td>
+            <td>{{movie.title}}</td>
+            <td>{{movie.winner ? 'Yes' : 'No'}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<paginator (pageSelected)="pageSelected($event)" [totalPages]="totalPages" [currentPage]="page"></paginator>

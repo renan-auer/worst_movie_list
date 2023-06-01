@@ -1,3 +1,13 @@
+<div class="row">
+    <div class="col-9">
+        <input type="number" [(ngModel)]="yearFilter" required value="2023">
+    </div>
+    <div class="col-2">
+        <button class="btn" (click)="getMoviesByYear()">Pesquisar</button>
+    </div>
+</div>
+<h4>List movie winners by years</h4>
+
 <table>
     <thead>
         <tr>

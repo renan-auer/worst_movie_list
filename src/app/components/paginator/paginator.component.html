@@ -1,0 +1,5 @@
+<div class="pagination">
+    <div (click)="back()">&laquo;</div>
+    <div (click)="setPage(page)" *ngFor="let page of pages" [ngClass]="{'active' : page === (currentPage + 1) }">{{page}}</div>
+    <div (click)="forward()">&raquo;</div>
+  </div>
