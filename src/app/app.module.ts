@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MoviesWinnersByYearComponent } from './components/movies-winners-by-year/movies-winners-by-year.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
+import { YearsWithMultipleWinnersComponent } from './components/years-with-multiple-winners/years-with-multiple-winners.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
     DashboardComponent,
     MovieListComponent,
     MoviesWinnersByYearComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    YearsWithMultipleWinnersComponent
   ],
   imports: [
     BrowserModule,

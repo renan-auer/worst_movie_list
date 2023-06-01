@@ -21,7 +21,7 @@ export class MoviesWinnersByYearComponent implements OnInit {
   getMoviesByYear() {
     this.movieService.getMoviesByYear(this.yearFilter).subscribe({
       next: (data) => { this.movies = data },
-      error: (e) => { }
+      error: (e) => { alert("Erro ao obter dados. Tente novamente mais tarde.") }
     })
   }
 }

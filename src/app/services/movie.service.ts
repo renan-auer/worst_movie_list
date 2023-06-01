@@ -14,7 +14,7 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   getYearsWithMultipleWinners() {
-    return this.http.get<YearWinnerList>(`${environment.apiUrl}?projection=years-with-mulple-winners`);
+    return this.http.get<YearWinnerList>(`${environment.apiUrl}?projection=years-with-multiple-winners`);
   }
 
   getMoviesByYear(year: number) {

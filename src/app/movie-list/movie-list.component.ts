@@ -31,7 +31,7 @@ export class MovieListComponent implements OnInit {
         this.movies = data?.content 
         this.totalPages = data.totalPages
       },
-      error: (e) => { }
+      error: (e) => { alert("Erro ao obter dados. Tente novamente mais tarde.") }
     })
   }
 
