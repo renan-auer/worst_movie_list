@@ -9,7 +9,7 @@ Bem vindo ao Worst Movie List. Essa é uma interface desenvolvida em Angular par
 Após clonar o projeto com o comando:
 
 ```bash
-git clone https://github.com/renan-auerworst_movie_list
+git clone https://github.com/renan-auer/worst_movie_list
 ```
 
 Entre na pasta do projeto, certifique que você possua o Node.js instalado e faça a instação dos pacotes necessários com o comando:
