@@ -1,27 +1,32 @@
-# WorstMovieList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+# Worst Movie List
 
-## Development server
+Bem vindo ao Worst Movie List. Essa é uma interface desenvolvida em Angular para possibilitar a leitura da lista de indicados e vencedores da categoria Pior Filme do Golden Raspberry Awards .
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Instalação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Após clonar o projeto com o comando:
 
-## Build
+```bash
+git clone https://github.com/renan-auerworst_movie_list
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Entre na pasta do projeto, certifique que você possua o Node.js instalado e faça a instação dos pacotes necessários com o comando:
 
-## Running unit tests
+```bash
+  npm install
+```
+    
+Depois execute o seguinte comando para iniciar a aplicação Angular:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+  ng serve -o
+```
+## Rodando os testes
 
-## Running end-to-end tests
+Para rodar os testes, rode o seguinte comando
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+  ng test
+```
