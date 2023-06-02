@@ -19,7 +19,7 @@ export class StudiosWinnersComponent implements OnInit {
     this.getStudioWinners()
   }
 
-  private getStudioWinners() {
+  getStudioWinners() {
     this.movieService.getStudiosWinners().subscribe({
       next: (data) => {
         const studios = data.studios

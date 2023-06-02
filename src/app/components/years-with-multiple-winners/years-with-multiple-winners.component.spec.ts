@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { YearsWithMultipleWinnersComponent } from './years-with-multiple-winners.component';
+import { MovieService } from 'src/app/services/movie.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('YearsWithMultipleWinnersComponent', () => {
   let component: YearsWithMultipleWinnersComponent;
@@ -8,7 +10,8 @@ describe('YearsWithMultipleWinnersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ YearsWithMultipleWinnersComponent ]
+      imports: [HttpClientModule],
+      declarations: [ YearsWithMultipleWinnersComponent ], providers: [MovieService]
     })
     .compileComponents();
 
@@ -17,7 +20,13 @@ describe('YearsWithMultipleWinnersComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('method getYears should be called', () => {
+    spyOn(component, 'getYears');
+    component.ngOnInit()
+    expect(component.getYears).toHaveBeenCalled();
   });
 });

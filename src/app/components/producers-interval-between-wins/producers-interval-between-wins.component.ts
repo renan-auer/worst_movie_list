@@ -21,7 +21,7 @@ export class ProducersIntervalBetweenWinsComponent implements OnInit {
   }
 
 
-  private getProducersIntervalWin() {
+  getProducersIntervalWin() {
     this.movieService.getProducersIntervalWin().subscribe({
       next: (data) => {
         this.minProducerIntervalWin = data.min

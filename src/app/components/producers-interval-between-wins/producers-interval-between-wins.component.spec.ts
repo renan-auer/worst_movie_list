@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProducersIntervalBetweenWinsComponent } from './producers-interval-between-wins.component';
+import { MovieService } from 'src/app/services/movie.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ProducersIntervalBetweenWinsComponent', () => {
   let component: ProducersIntervalBetweenWinsComponent;
@@ -8,7 +10,8 @@ describe('ProducersIntervalBetweenWinsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProducersIntervalBetweenWinsComponent ]
+      imports: [HttpClientModule],
+      declarations: [ ProducersIntervalBetweenWinsComponent ], providers: [ MovieService]
     })
     .compileComponents();
 
@@ -17,7 +20,13 @@ describe('ProducersIntervalBetweenWinsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('method getProducersIntervalWin should be called', () => {
+    spyOn(component, 'getProducersIntervalWin');
+    component.ngOnInit()
+    expect(component.getProducersIntervalWin).toHaveBeenCalled();
   });
 });

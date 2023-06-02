@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StudiosWinnersComponent } from './studios-winners.component';
+import { MovieService } from 'src/app/services/movie.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('StudiosWinnersComponent', () => {
   let component: StudiosWinnersComponent;
@@ -8,7 +10,8 @@ describe('StudiosWinnersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StudiosWinnersComponent ]
+      imports: [HttpClientModule],
+      declarations: [ StudiosWinnersComponent ], providers: [MovieService]
     })
     .compileComponents();
 
@@ -17,7 +20,13 @@ describe('StudiosWinnersComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('method getStudioWinners should be called', () => {
+    spyOn(component, 'getStudioWinners');
+    component.ngOnInit()
+    expect(component.getStudioWinners).toHaveBeenCalled();
   });
 });
